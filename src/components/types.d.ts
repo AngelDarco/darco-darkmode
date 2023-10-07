@@ -1,4 +1,4 @@
-export type themeType = "Light" | "Dark" | undefined;
+export type themeType = "Light" | "Dark";
 export type customStyleProps = [
   {
     theme: themeType;
