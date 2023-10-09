@@ -1,34 +1,55 @@
 @import url(./variables.css);
 
-.darkmodeContainer{
+.darkmodeContainer {
+  min-width: var(--main-container-with);
+  height: var(--main-container-height);
+  background-color: var(--main-container-background);
 
-    min-width: var(--main-container-with);
-    height: var(--main-container-height);
-    background-color: var(--main-container-background);
-    color: var(--main-container-color);
+  display: flex;
+  align-items: center;
+  border: 1px solid green;
+  padding: 6px;
+  border-radius: 28px;
 
-    margin-left: 30px;
+  .switch {
+    border-radius: inherit;
+    padding: 4px 6px;
 
+    &:hover {
+      padding: 4px;
+      background-color: var(--main-hover-color);
+      color: var(--main-background);
+    }
+  }
+  .addBorder {
+    background-color: var(--main-color);
+    color: var(--main-background);
+  }
+
+  .svg {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    border: 1px solid green;
-    padding: 4px;
-    border-radius: 28px;
-    
-    .switch{
-        padding: 8px 12px;
-        border-radius: 50px;
-        border: 1px solid var(--main-color);       
-    }
-}
-
-.switchContainerAnimation{
-    justify-content: flex-end;
-}
-
-button{
+    justify-content: center;
     color: inherit;
-    background-color: inherit;
-    border: 1px solid var(--main-container-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    & > svg {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+    }
+  }
+}
+.staticSwitch {
+  justify-content: center;
+}
+
+.normalSwitch {
+  justify-content: flex-start;
+}
+
+.dinamicSwitch {
+  justify-content: flex-end;
 }
