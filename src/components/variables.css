@@ -1,6 +1,9 @@
 :root{
     --main-container-with: 100px;
     --main-container-height: auto;
-    --main-container-background: transparent;
-    --main-container: inherit;
+    --main-container-background: inherit;
+
+    --main-background: #fff;
+    --main-color: #000;
+    --main-hover-color: #242526;
 }
