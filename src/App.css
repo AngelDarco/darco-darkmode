@@ -1,6 +1,6 @@
-:root{
+:root {
   --main-background: #242424;
-  --main-color: #fff
+  --main-color: #fff;
 }
 
 *,
@@ -11,18 +11,15 @@ body {
 }
 
 .App {
-  /* border: 1px solid rgb(255, 255, 255); */
   background-color: var(--main-background);
   color: var(--main-color);
   height: 100vh;
 }
 
-.darkmode-container{
-  position: relative;
+.darkmode-container {
   height: 80px;
-
+  padding: 0 80px;
   display: flex;
   align-items: center;
-  
   border-bottom: 1px dashed rebeccapurple;
 }
