@@ -1,0 +1,30 @@
+{
+  "name": "darco-dark-mode",
+  "type": "module",
+  "types": "dist/types",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
+  },
+  "version": "0.0.2",
+  "description": "a customizable component to switch between dark and light theme",
+  "main": "index.js",
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AngelDarco/darco-dark-mode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AngelDarco/darco-dark-mode.git/issues"
+  },
+  "author": "Angel Darco",
+  "license": "ISC",
+  "keywords": [
+    "dark-mode", "darco-dark-mode"
+  ]
+}
