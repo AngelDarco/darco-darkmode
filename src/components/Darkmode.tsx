@@ -54,7 +54,7 @@ const Darkmode = (props: darkmodeProps) => {
     if (icons && theme && typeof icons !== "boolean")
       setIcon(darkmode.handlerIcons(theme, icons));
 
-      // handler switch mode
+    // handler switch mode
     if (theme) {
       if (switchStyles) darkmode.changePropsStyles(theme, switchStyles);
       else darkmode.changeMode(theme);
@@ -77,7 +77,13 @@ const Darkmode = (props: darkmodeProps) => {
       <div
         style={styles?.switchContainer}
         className={`${moduleStyles.switch} ${
-          !icon ? moduleStyles.addBorder : ""
+          !icon
+            ? theme === "Dark"
+              ? moduleStyles.addDarkBorder
+              : theme === "Light"
+              ? moduleStyles.addLightBorder
+              : ""
+            : ""
         } ${hover ? moduleStyles.switchHover : ""}`}
       >
         <div style={styles?.iconsContainer} className={moduleStyles.svg}>
