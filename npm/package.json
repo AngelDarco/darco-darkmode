@@ -1,7 +1,16 @@
 {
   "name": "darco-dark-mode",
   "type": "module",
-  "types": "dist/types",
+  "module": "./npm/index.js",
+  "main": "./npm/index.umd.cjs",
+  "types": "./npm/types",
+  "exports": {
+    ".": {
+      "import": "./npm/index.js",
+      "require": "./npm/index.umd.cjs",
+      "types": "./npm/types"
+    }
+  },
   "private": false,
   "publishConfig": {
     "access": "public",
@@ -10,7 +19,6 @@
   },
   "version": "0.0.2",
   "description": "a customizable component to switch between dark and light theme",
-  "main": "index.js",
   "peerDependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -25,6 +33,7 @@
   "author": "Angel Darco",
   "license": "ISC",
   "keywords": [
-    "dark-mode", "darco-dark-mode"
+    "dark-mode",
+    "darco-dark-mode"
   ]
 }
