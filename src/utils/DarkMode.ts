@@ -2,7 +2,7 @@ import type { switchStylesProps, iconsType, themeType } from "../types/types";
 import defaultProps from "./defaultProps";
 
 export default class DarkMode {
-    /**
+  /**
    * Returns a MediaQueryList object representing the user's preference for dark theme.
    *
    * @return {MediaQueryList} The MediaQueryList object representing the user's preference for dark theme.
@@ -11,7 +11,7 @@ export default class DarkMode {
     return window.matchMedia("(prefers-color-scheme: dark)");
   }
 
-    /**
+  /**
    * Applies the specified theme styles to the given set of elements.
    *
    * @param {themeType} theme - The theme to apply.
@@ -49,7 +49,7 @@ export default class DarkMode {
     else return "Light";
   }
 
-    /**
+  /**
    * Detects the theme of the user.
    *
    * @return {themeType} The theme detected: "Dark" or "Light".
@@ -66,9 +66,16 @@ export default class DarkMode {
    * @return {themeType | undefined} The dark mode preference retrieved from local storage, or undefined if no preference is set.
    */
   storageDarkmodePreference(theme?: themeType): themeType | undefined {
-    const storage = window.localStorage.getItem("dark-mode") ?? undefined;
+    const storage =
+      window.localStorage.getItem(
+        "dark-mode-3e2c2d6d-a57e-499a-afdf-5f0f85140012"
+      ) ?? undefined;
     if (!theme) return storage as themeType;
-    else window.localStorage.setItem("dark-mode", theme);
+    else
+      window.localStorage.setItem(
+        "dark-mode-3e2c2d6d-a57e-499a-afdf-5f0f85140012",
+        theme
+      );
   }
 
   /**
@@ -95,10 +102,10 @@ export default class DarkMode {
   }
 
   /**
- * A function that handles the default switch theme.
- *
- * @return {Object} An object containing the default styles and icons.
- */
+   * A function that handles the default switch theme.
+   *
+   * @return {Object} An object containing the default styles and icons.
+   */
   handlerDefaultSwitchTheme() {
     const { defaultStyles, icons } = defaultProps();
     return { defaultStyles, icons };
