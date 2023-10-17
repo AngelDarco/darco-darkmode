@@ -1,20 +1,20 @@
 @import url(./variables.css);
 
 .darkmodeContainer {
-  min-width: var(--main-container-with);
-  width: 100px;
+  min-width: var(--main-min-container-with);
+  width: 60px;
   height: var(--main-container-height);
   background-color: var(--main-container-background);
 
+  font-size: small;
   display: flex;
   align-items: center;
   border: 1px solid green;
-  padding: 6px;
+  padding: 2px;
   border-radius: 28px;
-
   .switch {
     border-radius: inherit;
-    padding: 4px;
+    padding: 2px 4px;
   }
   .switchHover {
     &:hover {
@@ -23,9 +23,13 @@
     }
   }
 
-  .addBorder {
-    background-color: var(--main-color);
-    color: var(--main-background);
+  .addLightBorder {
+    background-color: #000;
+    color: #fff;
+  }
+  .addDarkBorder {
+    background-color: #fff;
+    color: #000;
   }
 
   .svg {
@@ -34,8 +38,8 @@
     justify-content: center;
     color: inherit;
     background-color: inherit;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     cursor: pointer;
 
@@ -47,6 +51,8 @@
   }
 }
 .staticSwitch {
+  border: none;
+  max-width: fit-content !important;
   justify-content: center;
 }
 
