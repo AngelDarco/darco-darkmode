@@ -9,17 +9,21 @@
   font-size: small;
   display: flex;
   align-items: center;
-  border: 1px solid green;
+  border: 1px solid #55aa00;
   padding: 2px;
   border-radius: 28px;
   .switch {
     border-radius: inherit;
     padding: 2px 4px;
   }
-  .switchHover {
+  .switchHoverDark {
     &:hover {
-      box-shadow: 0 0 10px var(--main-hover-color),
-        0 0 15px var(--main-hover-color);
+      box-shadow: 0 0 10px #fff, 0 0 15px #fff;
+    }
+  }
+  .switchHoverLight {
+    &:hover {
+      box-shadow: 0 0 10px #000, 0 0 15px #000;
     }
   }
 
