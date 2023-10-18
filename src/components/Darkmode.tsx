@@ -84,7 +84,15 @@ const Darkmode = (props: darkmodeProps) => {
               ? moduleStyles.addLightBorder
               : ""
             : ""
-        } ${hover ? moduleStyles.switchHover : ""}`}
+        } ${
+          hover
+            ? theme === "Dark"
+              ? moduleStyles.switchHoverDark
+              : theme === "Light"
+              ? moduleStyles.switchHoverLight
+              : ""
+            : ""
+        }`}
       >
         <div style={styles?.iconsContainer} className={moduleStyles.svg}>
           {icon ? icon : theme}
