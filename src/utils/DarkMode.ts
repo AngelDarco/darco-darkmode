@@ -12,6 +12,21 @@ export default class DarkMode {
   }
 
   /**
+   * A function that sets up a listener for changes to the user's dark theme and provides methods to add and remove listeners.
+   *
+   * @param {Fn} fn - The callback function to be executed when the user's dark theme changes.
+   * @return {Object} An object containing methods to add and remove the listener.
+   */
+  systemThemeListener() {
+    type Fn = () => void;
+    const addListener = (fn: Fn) =>
+      this.userDarkTheme().addEventListener("change", fn);
+    const removeListener = (fn: Fn) =>
+      this.userDarkTheme().removeEventListener("change", fn);
+    return { addListener, removeListener };
+  }
+
+  /**
    * Applies the specified theme styles to the given set of elements.
    *
    * @param {themeType} theme - The theme to apply.
