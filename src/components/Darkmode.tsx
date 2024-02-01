@@ -12,22 +12,13 @@ const Darkmode = (props: darkmodeProps) => {
   const [switchTheme, setSwitchTheme] = useState(false);
   const [icon, setIcon] = useState<JSX.Element>();
 
-  // get user system theme and set it in state
-  const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-  const [isDarkMode, setIsDarkMode] = useState(darkModeQuery.matches);
-
   useEffect(() => {
-    const changeThemeBySystem = (event: MediaQueryListEvent) =>
-      setIsDarkMode(event.matches);
+    // system theme listener
+    const { addListener, removeListener } = darkmode.systemThemeListener();
+    const fn = () => setTheme(darkmode.detectUserTheme());
+    // set system theme listener
+    addListener(fn);
 
-    darkModeQuery.addEventListener("change", changeThemeBySystem);
-
-    return () =>
-      darkModeQuery.removeEventListener("change", changeThemeBySystem);
-  }, []);
-
-  useEffect(() => {
     // recover theme storage.
     const storagedTheme = darkmode.storageDarkmodePreference();
 
@@ -58,6 +49,9 @@ const Darkmode = (props: darkmodeProps) => {
       const defaultIcons = darkmode.handlerDefaultSwitchTheme().icons;
       setIcon(darkmode.handlerIcons(theme, defaultIcons));
     }
+
+    // remove system theme listener
+    return () => removeListener(fn);
   }, [theme]);
 
   const handlerSwitchTheme = () => {
