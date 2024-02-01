@@ -4,6 +4,10 @@ import moduleStyles from "../styles/darkmode.module.css";
 import type { darkmodeProps, themeType } from "../types/types";
 import DarkMode from "../utils/DarkMode";
 
+import handlerSwitchTheme, {
+  HandlerSwitchThemeProps,
+} from "../utils/handlerSwitchTheme";
+
 const Darkmode = (props: darkmodeProps) => {
   const { switchStyles, icons, switchMode, styles, hover } = props;
   const darkmode = new DarkMode();
@@ -54,20 +58,14 @@ const Darkmode = (props: darkmodeProps) => {
     return () => removeListener(fn);
   }, [theme]);
 
-  const handlerSwitchTheme = () => {
-    if (theme) setTheme((prev) => (prev === "Light" ? "Dark" : "Light"));
-
-    setSwitchTheme((prev) => !prev);
-
-    // handler icons
-    if (icons && theme && typeof icons !== "boolean")
-      setIcon(darkmode.handlerIcons(theme, icons));
-
-    // handler switch mode
-    if (theme) {
-      if (switchStyles) darkmode.changePropsStyles(theme, switchStyles);
-      else darkmode.changeMode(theme);
-    }
+  const HandlerSwitchProps: HandlerSwitchThemeProps = {
+    theme,
+    setTheme,
+    setSwitchTheme,
+    icons,
+    setIcon,
+    switchStyles,
+    darkmode,
   };
 
   return (
@@ -81,7 +79,7 @@ const Darkmode = (props: darkmodeProps) => {
         ? moduleStyles.dinamicSwitch
         : moduleStyles.normalSwitch
     }`}
-      onClick={handlerSwitchTheme}
+      onClick={() => handlerSwitchTheme(HandlerSwitchProps)}
     >
       <div
         style={styles?.switchContainer}

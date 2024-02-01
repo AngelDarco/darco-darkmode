@@ -39,3 +39,15 @@ export type iconsType = [
     icon: JSX.Element;
   }
 ];
+
+export type HandlerSwitchThemeProps = {
+  theme: themeType | undefined;
+  setTheme: React.Dispatch<React.SetStateAction<themeType | undefined>>;
+  setSwitchTheme: React.Dispatch<React.SetStateAction<boolean>>;
+  icons: iconsType | boolean | undefined;
+  setIcon: React.Dispatch<React.SetStateAction<JSX.Element | undefined>>;
+  switchStyles: switchStylesProps | undefined;
+  darkmode: DarkMode | undefined;
+};
+/* 
+theme, setTheme, setSwitchTheme, icons, setIcon, switchStyles, darkmode */
