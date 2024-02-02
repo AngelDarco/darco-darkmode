@@ -47,7 +47,8 @@ export type HandlerSwitchThemeProps = {
   icons: iconsType | boolean | undefined;
   setIcon: React.Dispatch<React.SetStateAction<JSX.Element | undefined>>;
   switchStyles: switchStylesProps | undefined;
-  darkmode: DarkMode | undefined;
+  darkmode: any;
 };
-/* 
-theme, setTheme, setSwitchTheme, icons, setIcon, switchStyles, darkmode */
+
+declare const Darkmode: (props: darkmodeProps) => JSX.Element | null;
+export default Darkmode;
