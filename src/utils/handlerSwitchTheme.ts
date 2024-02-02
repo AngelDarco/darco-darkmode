@@ -1,4 +1,4 @@
-import { HandlerSwitchThemeProps } from "../types/types";
+import { HandlerSwitchThemeProps } from "../types";
 const handlerSwitchTheme = (props: HandlerSwitchThemeProps) => {
   const {
     theme,

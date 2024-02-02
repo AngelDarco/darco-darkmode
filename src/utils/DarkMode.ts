@@ -1,4 +1,4 @@
-import type { switchStylesProps, iconsType, themeType } from "../types/types";
+import type { switchStylesProps, iconsType, themeType } from "../types";
 import defaultProps from "./defaultProps";
 
 export default class DarkMode {

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import moduleStyles from "../styles/darkmode.module.css";
-import type { darkmodeProps, themeType } from "../types/types";
+import type { darkmodeProps, themeType } from "../types";
 import DarkMode from "../utils/DarkMode";
 
 import handlerSwitchTheme, {
