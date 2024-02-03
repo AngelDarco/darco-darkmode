@@ -13,6 +13,7 @@ export type darkmodeProps = {
   switchMode?: switchMod;
   styles?: customStylesProps;
   hover?: boolean;
+  isDark?: (e: string) => void;
 };
 
 export type themeType = "Light" | "Dark";

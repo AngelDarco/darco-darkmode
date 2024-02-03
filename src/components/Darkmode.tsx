@@ -9,7 +9,7 @@ import handlerSwitchTheme, {
 } from "../utils/handlerSwitchTheme";
 
 const Darkmode = (props: darkmodeProps) => {
-  const { switchStyles, icons, switchMode, styles, hover } = props;
+  const { switchStyles, icons, switchMode, styles, hover, isDark } = props;
   const darkmode = new DarkMode();
 
   const [theme, setTheme] = useState<themeType>();
@@ -53,6 +53,9 @@ const Darkmode = (props: darkmodeProps) => {
       const defaultIcons = darkmode.handlerDefaultSwitchTheme().icons;
       setIcon(darkmode.handlerIcons(theme, defaultIcons));
     }
+
+    // set isDark prop
+    if (isDark && theme) isDark(theme);
 
     // remove system theme listener
     return () => removeListener(fn);
