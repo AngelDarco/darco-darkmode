@@ -28,7 +28,7 @@ The "Customizable Dark Mode Component" is a versatile React component designed t
 
 ## Prop Types
 
-### `customStylesProps`
+### `CustomStyles`
 
 - `mainContainer?: CSSProperties`: Optional custom styles for the main container.
 - `switchContainer?: CSSProperties`: Optional custom styles for the switch container.
@@ -41,9 +41,9 @@ The "Customizable Dark Mode Component" is a versatile React component designed t
 
 ### `darkmodeProps`
 
-- `switchStyles?: switchStylesProps `: An array of two objects specifying styles for different themes.
+- `switchStyles?: SwitchStyles `: An array of two objects specifying styles for different themes.
 - `icons?:`: An array of objects specifying icons for different themes.
-- `switchMode?: `: The mode of dark mode switching ("dynamic" or "static").
+- `SwitchMode?: `: The mode of dark mode switching ("dynamic" or "static").
 - `styles?: `: Custom CSS.Properties styles for the switch component.
 - `hover?: `: Specifies whether hover effects should be applied in dark mode.
 
@@ -52,7 +52,7 @@ The "Customizable Dark Mode Component" is a versatile React component designed t
 - `"Light"`: Light theme.
 - `"Dark"`: Dark theme.
 
-### `switchStylesProps`
+### `SwitchStyles`
 
 An array of two objects specifying styles for different themes:
 
@@ -60,7 +60,7 @@ An array of two objects specifying styles for different themes:
 - `variables`: An array of CSS variable names to change.
 - `values`: An array of corresponding values to set for the CSS variables.
 
-### `iconsType`
+### `Icons`
 
 An array of two objects specifying icons for different themes:
 
@@ -77,17 +77,17 @@ You can use these types in your React application to ensure type safety when dea
 
 Example usage in a component:
 
-`icons: ` (Type: iconsType | boolean):
+`icons: ` (Type: Icons | boolean):
 
 - Customize icons for light and dark themes.
 
 ## Example of icons use:
 
 ```javascript
-import { iconsType } from "darco-dark-mode/types";
+import { Icons } from "darco-dark-mode/types";
 import Darkmode from "darco-dark-mode";
 
-const customIcons: iconsType = [
+const customIcons: Icons = [
   {
     theme: "Light",
     icon: <LightIcon />, // or a svg icon
@@ -111,7 +111,7 @@ const App = () => {
 
 ### Example to switch styles:
 
-`switchStyles: ` (Type: switchStylesProps):
+`switchStyles: ` (Type: SwitchStyles):
 
 Adjust CSS variables dynamically when switching themes.
 Example:
@@ -131,9 +131,9 @@ body {
 - This will change your CSS variables when switching between light and dark themes
 
 ```javascript
-import Darkmode, { switchStylesProps } from "darco-dark-mode";
+import Darkmode, { SwitchStyles } from "darco-dark-mode";
 
-const switchStylesVariables: switchStylesProps = [
+const switchStylesVariables: SwitchStyles = [
   {
     theme: "Light",
     variables: ["--bg-color", "--color"],
@@ -164,9 +164,9 @@ const App = () => {
 you can customize the styles for the main container, switch container, and icons container, passing an object with CssProperties to the `styles` prop.
 
 ```javascript
-import Darkmode, { customStylesProps } from "darco-dark-mode";
+import Darkmode, { CustomStyles } from "darco-dark-mode";
 
-const customStyles: customStylesProps = {
+const customStyles: CustomStyles = {
       mainContainer: {
         background: "red",
         border: "none"

@@ -1,6 +1,6 @@
 (function(){"use strict";try{if(typeof document<"u"){var r=document.createElement("style");r.appendChild(document.createTextNode(":root{--main-min-container-with: 60px;--main-container-height: auto;--main-container-background: inherit;--main-background: #fff;--main-color: #000;--main-hover-color: #242526}._darkmodeContainer_1u4jb_3{min-width:var(--main-min-container-with);width:60px;height:var(--main-container-height);background-color:var(--main-container-background);font-size:small;display:flex;align-items:center;border:1px solid #55aa00;padding:2px;border-radius:28px}._darkmodeContainer_1u4jb_3 ._switch_1u4jb_15{border-radius:inherit;padding:2px 4px}._darkmodeContainer_1u4jb_3 ._switchHoverDark_1u4jb_19:hover{box-shadow:0 0 10px #fff,0 0 15px #fff}._darkmodeContainer_1u4jb_3 ._switchHoverLight_1u4jb_24:hover{box-shadow:0 0 10px #000,0 0 15px #000}._darkmodeContainer_1u4jb_3 ._addLightBorder_1u4jb_30{background-color:#000;color:#fff}._darkmodeContainer_1u4jb_3 ._addDarkBorder_1u4jb_34{background-color:#fff;color:#000}._darkmodeContainer_1u4jb_3 ._svg_1u4jb_39{display:flex;align-items:center;justify-content:center;color:inherit;background-color:inherit;width:25px;height:25px;border-radius:50%;cursor:pointer}._darkmodeContainer_1u4jb_3 ._svg_1u4jb_39>svg{width:100%;height:100%;border-radius:inherit}._staticSwitch_1u4jb_57{border:none;max-width:fit-content!important;justify-content:center}._normalSwitch_1u4jb_63{justify-content:flex-start}._dinamicSwitch_1u4jb_67{justify-content:flex-end}")),document.head.appendChild(r)}}catch(n){console.error("vite-plugin-css-injected-by-js",n)}})();
-import De, { useState as te, useEffect as ur } from "react";
-var ne = { exports: {} }, M = {};
+import je, { useState as te, useEffect as ur } from "react";
+var ne = { exports: {} }, $ = {};
 /**
  * @license React
  * react-jsx-runtime.production.min.js
@@ -13,20 +13,20 @@ var ne = { exports: {} }, M = {};
 var Pe;
 function lr() {
   if (Pe)
-    return M;
+    return $;
   Pe = 1;
-  var k = De, c = Symbol.for("react.element"), s = Symbol.for("react.fragment"), m = Object.prototype.hasOwnProperty, d = k.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, R = { key: !0, ref: !0, __self: !0, __source: !0 };
+  var k = je, c = Symbol.for("react.element"), s = Symbol.for("react.fragment"), m = Object.prototype.hasOwnProperty, d = k.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, R = { key: !0, ref: !0, __self: !0, __source: !0 };
   function _(l, a, b) {
-    var p, w = {}, y = null, D = null;
-    b !== void 0 && (y = "" + b), a.key !== void 0 && (y = "" + a.key), a.ref !== void 0 && (D = a.ref);
+    var p, w = {}, y = null, j = null;
+    b !== void 0 && (y = "" + b), a.key !== void 0 && (y = "" + a.key), a.ref !== void 0 && (j = a.ref);
     for (p in a)
       m.call(a, p) && !R.hasOwnProperty(p) && (w[p] = a[p]);
     if (l && l.defaultProps)
       for (p in a = l.defaultProps, a)
         w[p] === void 0 && (w[p] = a[p]);
-    return { $$typeof: c, type: l, key: y, ref: D, props: w, _owner: d.current };
+    return { $$typeof: c, type: l, key: y, ref: j, props: w, _owner: d.current };
   }
-  return M.Fragment = s, M.jsx = _, M.jsxs = _, M;
+  return $.Fragment = s, $.jsx = _, $.jsxs = _, $;
 }
 var W = {};
 /**
@@ -38,10 +38,10 @@ var W = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var je;
+var De;
 function fr() {
-  return je || (je = 1, process.env.NODE_ENV !== "production" && function() {
-    var k = De, c = Symbol.for("react.element"), s = Symbol.for("react.portal"), m = Symbol.for("react.fragment"), d = Symbol.for("react.strict_mode"), R = Symbol.for("react.profiler"), _ = Symbol.for("react.provider"), l = Symbol.for("react.context"), a = Symbol.for("react.forward_ref"), b = Symbol.for("react.suspense"), p = Symbol.for("react.suspense_list"), w = Symbol.for("react.memo"), y = Symbol.for("react.lazy"), D = Symbol.for("react.offscreen"), Y = Symbol.iterator, Z = "@@iterator";
+  return De || (De = 1, process.env.NODE_ENV !== "production" && function() {
+    var k = je, c = Symbol.for("react.element"), s = Symbol.for("react.portal"), m = Symbol.for("react.fragment"), d = Symbol.for("react.strict_mode"), R = Symbol.for("react.profiler"), _ = Symbol.for("react.provider"), l = Symbol.for("react.context"), a = Symbol.for("react.forward_ref"), b = Symbol.for("react.suspense"), p = Symbol.for("react.suspense_list"), w = Symbol.for("react.memo"), y = Symbol.for("react.lazy"), j = Symbol.for("react.offscreen"), Y = Symbol.iterator, Z = "@@iterator";
     function q(e) {
       if (e === null || typeof e != "object")
         return null;
@@ -69,13 +69,13 @@ function fr() {
     var Oe = !1, xe = !1, Le = !1, Ae = !1, Ie = !1, ae;
     ae = Symbol.for("react.module.reference");
     function Fe(e) {
-      return !!(typeof e == "string" || typeof e == "function" || e === m || e === R || Ie || e === d || e === b || e === p || Ae || e === D || Oe || xe || Le || typeof e == "object" && e !== null && (e.$$typeof === y || e.$$typeof === w || e.$$typeof === _ || e.$$typeof === l || e.$$typeof === a || // This needs to include all possible module reference object
+      return !!(typeof e == "string" || typeof e == "function" || e === m || e === R || Ie || e === d || e === b || e === p || Ae || e === j || Oe || xe || Le || typeof e == "object" && e !== null && (e.$$typeof === y || e.$$typeof === w || e.$$typeof === _ || e.$$typeof === l || e.$$typeof === a || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
       e.$$typeof === ae || e.getModuleId !== void 0));
     }
-    function $e(e, r, t) {
+    function Me(e, r, t) {
       var n = e.displayName;
       if (n)
         return n;
@@ -115,7 +115,7 @@ function fr() {
             var t = e;
             return oe(t._context) + ".Provider";
           case a:
-            return $e(e, e.render, "ForwardRef");
+            return Me(e, e.render, "ForwardRef");
           case w:
             var n = e.displayName || null;
             return n !== null ? n : P(e.type) || "Memo";
@@ -134,7 +134,7 @@ function fr() {
     function ve() {
     }
     ve.__reactDisabledLog = !0;
-    function Me() {
+    function $e() {
       {
         if (F === 0) {
           ie = console.log, se = console.info, ce = console.warn, ue = console.error, le = console.group, fe = console.groupCollapsed, de = console.groupEnd;
@@ -224,7 +224,7 @@ function fr() {
       var u = Error.prepareStackTrace;
       Error.prepareStackTrace = void 0;
       var f;
-      f = z.current, z.current = null, Me();
+      f = z.current, z.current = null, $e();
       try {
         if (r) {
           var i = function() {
@@ -237,29 +237,29 @@ function fr() {
           }), typeof Reflect == "object" && Reflect.construct) {
             try {
               Reflect.construct(i, []);
-            } catch (j) {
-              n = j;
+            } catch (D) {
+              n = D;
             }
             Reflect.construct(e, [], i);
           } else {
             try {
               i.call();
-            } catch (j) {
-              n = j;
+            } catch (D) {
+              n = D;
             }
             e.call(i.prototype);
           }
         } else {
           try {
             throw Error();
-          } catch (j) {
-            n = j;
+          } catch (D) {
+            n = D;
           }
           e();
         }
-      } catch (j) {
-        if (j && n && typeof j.stack == "string") {
-          for (var o = j.stack.split(`
+      } catch (D) {
+        if (D && n && typeof D.stack == "string") {
+          for (var o = D.stack.split(`
 `), E = n.stack.split(`
 `), v = o.length - 1, h = E.length - 1; v >= 1 && h >= 0 && o[v] !== E[h]; )
             h--;
@@ -369,7 +369,7 @@ function fr() {
       if (Ze(e))
         return g("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", He(e)), pe(e);
     }
-    var $ = C.ReactCurrentOwner, qe = {
+    var M = C.ReactCurrentOwner, qe = {
       key: !0,
       ref: !0,
       __self: !0,
@@ -393,9 +393,9 @@ function fr() {
       return e.key !== void 0;
     }
     function Ge(e, r) {
-      if (typeof e.ref == "string" && $.current && r && $.current.stateNode !== r) {
-        var t = P($.current.type);
-        X[t] || (g('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', P($.current.type), e.ref), X[t] = !0);
+      if (typeof e.ref == "string" && M.current && r && M.current.stateNode !== r) {
+        var t = P(M.current.type);
+        X[t] || (g('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', P(M.current.type), e.ref), X[t] = !0);
       }
     }
     function Ke(e, r) {
@@ -464,7 +464,7 @@ function fr() {
           var h = typeof e == "function" ? e.displayName || e.name || "Unknown" : e;
           o && Ke(i, h), E && Xe(i, h);
         }
-        return Qe(e, o, E, u, n, $.current, i);
+        return Qe(e, o, E, u, n, M.current, i);
       }
     }
     var Q = C.ReactCurrentOwner, Ee = C.ReactDebugCurrentFrame;
@@ -639,11 +639,29 @@ const dr = "_darkmodeContainer_1u4jb_3", vr = "_switchHoverDark_1u4jb_19", hr = 
   normalSwitch: br,
   dinamicSwitch: yr
 }, Er = () => {
-  const k = /* @__PURE__ */ O.jsx("svg", { stroke: "currentColor", fill: "currentColor", strokeWidth: "0", viewBox: "0 0 256 256", children: /* @__PURE__ */ O.jsx("path", { d: "M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z" }) });
-  return { dark: /* @__PURE__ */ O.jsxs("svg", { stroke: "currentColor", fill: "currentColor", strokeWidth: "0", viewBox: "0 0 24 24", children: [
-    /* @__PURE__ */ O.jsx("path", { fill: "none", d: "M0 0h24v24H0z" }),
-    /* @__PURE__ */ O.jsx("path", { d: "M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" })
-  ] }), light: k };
+  const k = /* @__PURE__ */ O.jsx(
+    "svg",
+    {
+      stroke: "currentColor",
+      fill: "currentColor",
+      strokeWidth: "0",
+      viewBox: "0 0 256 256",
+      children: /* @__PURE__ */ O.jsx("path", { d: "M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z" })
+    }
+  );
+  return { dark: /* @__PURE__ */ O.jsxs(
+    "svg",
+    {
+      stroke: "currentColor",
+      fill: "currentColor",
+      strokeWidth: "0",
+      viewBox: "0 0 24 24",
+      children: [
+        /* @__PURE__ */ O.jsx("path", { fill: "none", d: "M0 0h24v24H0z" }),
+        /* @__PURE__ */ O.jsx("path", { d: "M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" })
+      ]
+    }
+  ), light: k };
 }, wr = () => ({
   defaultStyles: Rr,
   icons: Tr
@@ -689,8 +707,8 @@ class Cr {
   /**
    * Applies the specified theme styles to the given set of elements.
    *
-   * @param {themeType} theme - The theme to apply.
-   * @param {switchStylesProps} styles - The array with the dark and light objects of styles to apply.
+   * @param {ThemeType} theme - The theme to apply.
+   * @param {SwitchStyles} styles - The array with the dark and light objects of styles to apply.
    * @return {void} This function does not return a value.
    */
   changePropsStyles(c, s) {
@@ -705,8 +723,8 @@ class Cr {
   /**
    * Change the mode of the theme.
    *
-   * @param {themeType} theme - The current theme mode.
-   * @return {themeType} The updated theme mode.
+   * @param {ThemeType} theme - The current theme mode.
+   * @return {ThemeType} The updated theme mode.
    */
   changeMode(c) {
     return c !== "Dark" ? "Dark" : "Light";
@@ -714,7 +732,7 @@ class Cr {
   /**
    * Detects the theme of the user.
    *
-   * @return {themeType} The theme detected: "Dark" or "Light".
+   * @return {ThemeType} The theme detected: "Dark" or "Light".
    */
   detectUserTheme() {
     return this.userDarkTheme().matches ? "Dark" : "Light";
@@ -722,8 +740,8 @@ class Cr {
   /**
    * Retrieves or sets the dark mode preference from local storage.
    *
-   * @param {themeType} theme - The theme to set as the dark mode preference.
-   * @return {themeType | undefined} The dark mode preference retrieved from local storage, or undefined if no preference is set.
+   * @param {ThemeType} theme - The theme to set as the dark mode preference.
+   * @return {ThemeType | undefined} The dark mode preference retrieved from local storage, or undefined if no preference is set.
    */
   storageDarkmodePreference(c) {
     const s = window.localStorage.getItem(
@@ -740,8 +758,8 @@ class Cr {
   /**
    * Handles the icons based on the theme.
    *
-   * @param {themeType} theme - The theme type Light or Dark.
-   * @param {iconsType} icons - The object with the dark and light theme and the icons .
+   * @param {ThemeType} theme - The theme type Light or Dark.
+   * @param {Icons} icons - The object with the dark and light theme and the icons .
    * @return {string | undefined} The icon based on the theme, or undefined if no matching icon is found.
    */
   handlerIcons(c, s) {
@@ -768,22 +786,22 @@ const Pr = (k) => {
     icons: d,
     setIcon: R,
     switchStyles: _,
-    darkmode: l
+    darkMode: l
   } = k;
   c && s((a) => a === "Light" ? "Dark" : "Light"), m((a) => !a), d && c && typeof d != "boolean" && R(l.handlerIcons(c, d)), c && (_ ? l.changePropsStyles(c, _) : l.changeMode(c));
-}, Dr = (k) => {
-  const { switchStyles: c, icons: s, switchMode: m, styles: d, hover: R, isDark: _ } = k, l = new Cr(), [a, b] = te(), [p, w] = te(!1), [y, D] = te();
+}, jr = (k) => {
+  const { switchStyles: c, icons: s, SwitchMode: m, styles: d, hover: R, isDark: _ } = k, l = new Cr(), [a, b] = te(), [p, w] = te(!1), [y, j] = te();
   ur(() => {
     const { addListener: Z, removeListener: q } = l.systemThemeListener(), C = () => b(l.detectUserTheme());
     Z(C);
     const g = l.storageDarkmodePreference();
-    if (!g && !a ? b(l.detectUserTheme()) : g && !a ? b(g) : a && (c ? l.changePropsStyles(a, c) : l.changeMode(a), l.storageDarkmodePreference(a), s && a && typeof s != "boolean" && D(l.handlerIcons(a, s)), a === "Dark" && w(!0)), a && !c) {
+    if (!g && !a ? b(l.detectUserTheme()) : g && !a ? b(g) : a && (c ? l.changePropsStyles(a, c) : l.changeMode(a), l.storageDarkmodePreference(a), s && a && typeof s != "boolean" && j(l.handlerIcons(a, s)), a === "Dark" && w(!0)), a && !c) {
       const I = l.handlerDefaultSwitchTheme().defaultStyles;
       l.changePropsStyles(a, I);
     }
     if (a && typeof s == "boolean") {
       const I = l.handlerDefaultSwitchTheme().icons;
-      D(l.handlerIcons(a, I));
+      j(l.handlerIcons(a, I));
     }
     return _ && a && _(a), () => q(C);
   }, [a]);
@@ -792,9 +810,9 @@ const Pr = (k) => {
     setTheme: b,
     setSwitchTheme: w,
     icons: s,
-    setIcon: D,
+    setIcon: j,
     switchStyles: c,
-    darkmode: l
+    darkMode: l
   };
   return /* @__PURE__ */ O.jsx(
     "div",
@@ -815,5 +833,5 @@ const Pr = (k) => {
   );
 };
 export {
-  Dr as default
+  jr as default
 };

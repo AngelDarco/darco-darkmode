@@ -1,59 +1,59 @@
 import { CSSProperties } from 'react';
 
-export declare type customStylesProps = {
+export declare type CustomStyles = {
     mainContainer?: CSSProperties;
     switchContainer?: CSSProperties;
     iconsContainer?: CSSProperties;
 };
 
-declare const Darkmode: (props: darkmodeProps) => JSX.Element | null;
-export default Darkmode;
+declare const DarkMode: (props: DarkModeProps) => JSX.Element | null;
+export default DarkMode;
 
-export declare type darkmodeProps = {
-    switchStyles?: switchStylesProps;
-    icons?: iconsType | boolean;
-    switchMode?: switchMod;
-    styles?: customStylesProps;
+export declare type DarkModeProps = {
+    switchStyles: SwitchStyles;
+    icons?: Icons | boolean;
+    SwitchMode?: SwitchMode;
+    styles?: CustomStyles;
     hover?: boolean;
-    isDark?: (e: string) => void;
+    isDark?: (theme: string) => void;
 };
 
-export declare type HandlerSwitchThemeProps = {
-    theme: themeType | undefined;
-    setTheme: React.Dispatch<React.SetStateAction<themeType | undefined>>;
+export declare type HandlerSwitchTheme = {
+    theme: ThemeType | undefined;
+    setTheme: React.Dispatch<React.SetStateAction<ThemeType | undefined>>;
     setSwitchTheme: React.Dispatch<React.SetStateAction<boolean>>;
-    icons: iconsType | boolean | undefined;
+    icons: Icons | boolean | undefined;
     setIcon: React.Dispatch<React.SetStateAction<JSX.Element | undefined>>;
-    switchStyles: switchStylesProps | undefined;
-    darkmode: any;
+    switchStyles: SwitchStyles | undefined;
+    darkMode: any;
 };
 
-export declare type iconsType = [
+export declare type Icons = [
     {
-    theme: themeType;
+    theme: ThemeType;
     icon: JSX.Element;
 },
     {
-    theme: themeType;
+    theme: ThemeType;
     icon: JSX.Element;
 }
 ];
 
-export declare type switchMod = "dinamic" | "static";
+export declare type SwitchMode = "dynamic" | "static";
 
-export declare type switchStylesProps = [
+export declare type SwitchStyles = [
     {
-    theme: themeType;
+    theme: ThemeType;
     variables: string[];
     values: string[];
 },
     {
-    theme: themeType;
+    theme: ThemeType;
     variables: string[];
     values: string[];
 }
 ];
 
-export declare type themeType = "Light" | "Dark";
+export declare type ThemeType = "Light" | "Dark";
 
 export { }
