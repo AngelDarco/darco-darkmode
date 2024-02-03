@@ -1,18 +1,18 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import moduleStyles from "../styles/darkmode.module.css";
-import type { darkmodeProps, themeType } from "../types";
+import type { DarkModeProps, ThemeType } from "../types";
 import DarkMode from "../utils/DarkMode";
 
 import handlerSwitchTheme, {
-  HandlerSwitchThemeProps,
+  HandlerSwitchTheme,
 } from "../utils/handlerSwitchTheme";
 
-const Darkmode = (props: darkmodeProps) => {
-  const { switchStyles, icons, switchMode, styles, hover, isDark } = props;
+const Darkmode = (props: DarkModeProps) => {
+  const { switchStyles, icons, SwitchMode, styles, hover, isDark } = props;
   const darkmode = new DarkMode();
 
-  const [theme, setTheme] = useState<themeType>();
+  const [theme, setTheme] = useState<ThemeType>();
   const [switchTheme, setSwitchTheme] = useState(false);
   const [icon, setIcon] = useState<JSX.Element>();
 
@@ -61,14 +61,14 @@ const Darkmode = (props: darkmodeProps) => {
     return () => removeListener(fn);
   }, [theme]);
 
-  const HandlerSwitchProps: HandlerSwitchThemeProps = {
+  const HandlerSwitchProps: HandlerSwitchTheme = {
     theme,
     setTheme,
     setSwitchTheme,
     icons,
     setIcon,
     switchStyles,
-    darkmode,
+    darkMode: darkmode,
   };
 
   return (
@@ -76,7 +76,7 @@ const Darkmode = (props: darkmodeProps) => {
       style={styles?.mainContainer}
       className={`${moduleStyles.darkmodeContainer} 
     ${
-      switchMode === "static"
+      SwitchMode === "static"
         ? moduleStyles.staticSwitch
         : switchTheme
         ? moduleStyles.dinamicSwitch

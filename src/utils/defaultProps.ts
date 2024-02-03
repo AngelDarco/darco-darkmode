@@ -1,5 +1,5 @@
-import type { switchStylesProps, iconsType } from "../types";
-import Icons from "../assets/Icons";
+import type { SwitchStyles, Icons } from "../types";
+import DefaultIcons from "../assets/Icons";
 
 const defaultProps = () => {
   return {
@@ -8,7 +8,7 @@ const defaultProps = () => {
   };
 };
 
-const defaultStyles: switchStylesProps = [
+const defaultStyles: SwitchStyles = [
   {
     theme: "Dark",
     variables: ["--main-background", "--main-color", "--main-hover-color"],
@@ -21,8 +21,8 @@ const defaultStyles: switchStylesProps = [
   },
 ];
 
-const { dark, light } = Icons();
-const icons: iconsType = [
+const { dark, light } = DefaultIcons();
+const icons: Icons = [
   {
     theme: "Dark",
     icon: dark,

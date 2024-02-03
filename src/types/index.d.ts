@@ -1,55 +1,55 @@
 import { CSSProperties } from "react";
 
-export type customStylesProps = {
+export type CustomStyles = {
   mainContainer?: CSSProperties;
   switchContainer?: CSSProperties;
   iconsContainer?: CSSProperties;
 };
 
-export type switchMod = "dinamic" | "static";
-export type darkmodeProps = {
-  switchStyles?: switchStylesProps;
-  icons?: iconsType | boolean;
-  switchMode?: switchMod;
-  styles?: customStylesProps;
+export type SwitchMode = "dynamic" | "static";
+export type DarkModeProps = {
+  switchStyles: SwitchStyles;
+  icons?: Icons | boolean;
+  SwitchMode?: SwitchMode;
+  styles?: CustomStyles;
   hover?: boolean;
-  isDark?: (e: string) => void;
+  isDark?: (theme: string) => void;
 };
 
-export type themeType = "Light" | "Dark";
-export type switchStylesProps = [
+export type ThemeType = "Light" | "Dark";
+export type SwitchStyles = [
   {
-    theme: themeType;
+    theme: ThemeType;
     variables: string[];
     values: string[];
   },
   {
-    theme: themeType;
+    theme: ThemeType;
     variables: string[];
     values: string[];
   }
 ];
 
-export type iconsType = [
+export type Icons = [
   {
-    theme: themeType;
+    theme: ThemeType;
     icon: JSX.Element;
   },
   {
-    theme: themeType;
+    theme: ThemeType;
     icon: JSX.Element;
   }
 ];
 
-export type HandlerSwitchThemeProps = {
-  theme: themeType | undefined;
-  setTheme: React.Dispatch<React.SetStateAction<themeType | undefined>>;
+export type HandlerSwitchTheme = {
+  theme: ThemeType | undefined;
+  setTheme: React.Dispatch<React.SetStateAction<ThemeType | undefined>>;
   setSwitchTheme: React.Dispatch<React.SetStateAction<boolean>>;
-  icons: iconsType | boolean | undefined;
+  icons: Icons | boolean | undefined;
   setIcon: React.Dispatch<React.SetStateAction<JSX.Element | undefined>>;
-  switchStyles: switchStylesProps | undefined;
-  darkmode: any;
+  switchStyles: SwitchStyles | undefined;
+  darkMode: any;
 };
 
-declare const Darkmode: (props: darkmodeProps) => JSX.Element | null;
-export default Darkmode;
+declare const DarkMode: (props: DarkModeProps) => JSX.Element | null;
+export default DarkMode;

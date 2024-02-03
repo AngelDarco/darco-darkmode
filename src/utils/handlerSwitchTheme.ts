@@ -1,5 +1,5 @@
-import { HandlerSwitchThemeProps } from "../types";
-const handlerSwitchTheme = (props: HandlerSwitchThemeProps) => {
+import { HandlerSwitchTheme } from "../types";
+const handlerSwitchTheme = (props: HandlerSwitchTheme) => {
   const {
     theme,
     setTheme,
@@ -7,7 +7,7 @@ const handlerSwitchTheme = (props: HandlerSwitchThemeProps) => {
     icons,
     setIcon,
     switchStyles,
-    darkmode,
+    darkMode,
   } = props;
 
   if (theme) setTheme((prev) => (prev === "Light" ? "Dark" : "Light"));
@@ -16,13 +16,13 @@ const handlerSwitchTheme = (props: HandlerSwitchThemeProps) => {
 
   // handler icons
   if (icons && theme && typeof icons !== "boolean")
-    setIcon(darkmode.handlerIcons(theme, icons));
+    setIcon(darkMode.handlerIcons(theme, icons));
 
   // handler switch mode
   if (theme) {
-    if (switchStyles) darkmode.changePropsStyles(theme, switchStyles);
-    else darkmode.changeMode(theme);
+    if (switchStyles) darkMode.changePropsStyles(theme, switchStyles);
+    else darkMode.changeMode(theme);
   }
 };
-export type { HandlerSwitchThemeProps };
+export type { HandlerSwitchTheme };
 export default handlerSwitchTheme;
