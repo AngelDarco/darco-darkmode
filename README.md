@@ -198,18 +198,19 @@ const App = () => {
 ### Example of use of the `isDark` prop
 
 ```javascript
+import { useState } from "react";
 import Darkmode from "./components/Darkmode";
 
 function App() {
   const [theme, setTheme] = useState("");
 
   const myCurrentTheme = (e: string) => {
-    setState(e);
+    setTheme(e);
   };
 
   return (
     <div className="App">
-      <Darkmode isDark={myCurrentState} />
+      <Darkmode isDark={myCurrentTheme} />
       <h1>DarkMode working on it ...</h1>
       <h2>my theme is {theme}</h2>
     </div>
