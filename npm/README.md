@@ -4,7 +4,7 @@
 
 The "Customizable Dark Mode Component" is a versatile React component designed to effortlessly integrate dark mode functionality into your web applications. With this component, you can easily switch between light and dark themes while allowing customization through various props.
 
-![dark-mode](https://github.com/AngelDarco/TiendaRopa/assets/29819444/49231044-cdea-4d25-9be2-c8e35e2b233a)
+![darkmode](https://github.com/AngelDarco/darco-darkmode/assets/29819444/5e7f024b-6f17-44aa-b4e8-de940673fb89)
 
 ## Features
 
@@ -67,6 +67,10 @@ An array of two objects specifying icons for different themes:
 - `theme`: The theme type ("Light" or "Dark").
 - `icon`: The icon to display as a JSX element.
 
+### `isDark`
+
+- a callback funtion to handle the current state
+
 ## Usage
 
 You can use these types in your React application to ensure type safety when dealing with custom styles and dark mode configurations.
@@ -77,7 +81,7 @@ Example usage in a component:
 
 - Customize icons for light and dark themes.
 
-## Example:
+## Example of icons use:
 
 ```javascript
 import { iconsType } from "darco-dark-mode/types";
@@ -102,6 +106,10 @@ const App = () => {
   )
 }
 ```
+
+#
+
+### Example to switch styles:
 
 `switchStyles: ` (Type: switchStylesProps):
 
@@ -143,6 +151,10 @@ const App = () => {
 };
 ```
 
+#
+
+### Example to customize the switch button:
+
 `Styles: ` (Type: CSSProperties):
 
 - Custom styles for the main container.
@@ -151,8 +163,6 @@ const App = () => {
 
 you can customize the styles for the main container, switch container, and icons container, passing an object with CssProperties to the `styles` prop.
 
-### Example:
-
 ```javascript
 import Darkmode, { customStylesProps } from "darco-dark-mode";
 
@@ -160,15 +170,19 @@ const customStyles: customStylesProps = {
       mainContainer: {
         background: "red",
         border: "none"
+        /* more custom styles for the main container*/
       },
       switchContainer: {
         background: "purple",
         borderRadius: "10px"
+        /* more custom styles for the switch container */
+
       },
       iconsContainer: {
         color: "red",
         justifyContent: "center",
         alignItems: "center"
+        /* more custom styles for the icon container */
       }
     },
 
@@ -176,5 +190,30 @@ const App = () => {
   return (
     <Darkmode styles={customStyles}/>
   )
+}
+```
+
+#
+
+### Example of use of the `isDark` prop
+
+```javascript
+import { useState } from "react";
+import Darkmode from "./components/Darkmode";
+
+function App() {
+  const [theme, setTheme] = useState("");
+
+  const myCurrentTheme = (e: string) => {
+    setTheme(e);
+  };
+
+  return (
+    <div className="App">
+      <Darkmode isDark={myCurrentTheme} />
+      <h1>DarkMode working on it ...</h1>
+      <h2>my theme is {theme}</h2>
+    </div>
+  );
 }
 ```

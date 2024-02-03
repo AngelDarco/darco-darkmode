@@ -17,7 +17,7 @@
     "registry": "https://registry.npmjs.org/",
     "tag": "latest"
   },
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "a customizable component to switch between dark and light theme",
   "peerDependencies": {
     "react": "^18.2.0",

@@ -10,9 +10,12 @@ function App() {
 
   return (
     <div className="App">
-      <Darkmode switchMode="static" hover icons isDark={id} />
+      <Darkmode isDark={id} icons />
       <h1>DarkMode working on it ...</h1>
-      <h2>my theme is {state}</h2>
+      <h2>
+        my theme is{" "}
+        <i style={{ color: state === "Dark" ? "blue" : "orange" }}>{state}</i>
+      </h2>
     </div>
   );
 }
