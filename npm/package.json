@@ -3,12 +3,12 @@
   "type": "module",
   "module": "./index.js",
   "main": "./index.umd.cjs",
-  "types": "./@types/darco-dark-mode/darco-dark-mode.d.ts",
+  "types": "./@types/index.d.ts",
   "exports": {
     ".": {
       "import": "./index.js",
       "require": "./index.umd.cjs",
-      "types": "./@types/darco-dark-mode/darco-dark-mode.d.ts"
+      "types": "./@types/index.d.ts"
     }
   },
   "private": false,
@@ -17,7 +17,7 @@
     "registry": "https://registry.npmjs.org/",
     "tag": "latest"
   },
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "a customizable component to switch between dark and light theme",
   "peerDependencies": {
     "react": "^18.2.0",
