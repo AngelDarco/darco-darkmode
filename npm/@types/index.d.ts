@@ -15,6 +15,7 @@ export declare type darkmodeProps = {
     switchMode?: switchMod;
     styles?: customStylesProps;
     hover?: boolean;
+    isDark?: (e: string) => void;
 };
 
 export declare type HandlerSwitchThemeProps = {
