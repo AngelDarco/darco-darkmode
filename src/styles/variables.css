@@ -1,9 +1,6 @@
 :root {
-  --main-min-container-with: 60px;
-  --main-container-height: auto;
-  --main-container-background: inherit;
-
   --main-background: #fff;
   --main-color: #000;
-  --main-hover-color: #242526;
+  --darkmodeWidth: 55px;
+  --svgWH: 20px;
 }
