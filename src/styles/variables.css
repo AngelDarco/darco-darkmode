@@ -1,6 +1,6 @@
 :root {
-  --main-background: #fff;
-  --main-color: #000;
+  --darkmodeBg: #fff;
+  --darkmodeColor: #000;
   --darkmodeWidth: 55px;
   --svgWH: 20px;
 }
