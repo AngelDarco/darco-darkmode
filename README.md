@@ -6,6 +6,9 @@ The "Customizable Dark Mode Component" is a versatile React component designed t
 
 https://github.com/AngelDarco/darco-darkmode/assets/29819444/9440a74f-f429-4ba5-883a-774c656ca3f9
 
+#### [Demo](https://angeldarco.github.io/darco-darkmode/)
+
+
 ## Features
 
 - **Dark Mode Switching**: Seamlessly switch between light and dark themes with a straightforward user interface.
