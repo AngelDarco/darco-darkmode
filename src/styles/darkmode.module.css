@@ -1,69 +1,52 @@
 @import url(./variables.css);
 
 .darkmodeContainer {
-  min-width: var(--main-min-container-with);
-  width: 60px;
-  height: var(--main-container-height);
-  background-color: var(--main-container-background);
-
+  min-width: var(--darkmodeWidth);
+  background-color: inherit;
   font-size: small;
   display: flex;
   align-items: center;
-  border: 1px solid #55aa00;
-  padding: 2px;
-  border-radius: 28px;
-  .switch {
-    border-radius: inherit;
-    padding: 2px 4px;
-  }
-  .switchHoverDark {
-    &:hover {
-      box-shadow: 0 0 10px #fff, 0 0 15px #fff;
-    }
-  }
-  .switchHoverLight {
-    &:hover {
-      box-shadow: 0 0 10px #000, 0 0 15px #000;
-    }
-  }
+  border: 1px solid var(--darkmodeColor);
+  border-radius: 25px;
+  padding: 3px 4px;
 
-  .addLightBorder {
-    background-color: #000;
-    color: #fff;
-  }
-  .addDarkBorder {
-    background-color: #fff;
-    color: #000;
+  .text {
+    width: fit-content !important;
+    height: fit-content !important;
+    padding: 2px 0;
   }
 
   .svg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: inherit;
     background-color: inherit;
-    width: 25px;
-    height: 25px;
+    width: var(--svgWH, 20px);
+    height: var(--svgWH, 20px);
     border-radius: 50%;
+
     cursor: pointer;
+    border-radius: inherit;
+    transition: transform 0.5s ease;
 
     & > svg {
       width: 100%;
       height: 100%;
       border-radius: inherit;
+      fill: var(--svgFill, var(--darkmodeColor));
     }
   }
+
+  .normalSwitch {
+    transform: translateX(0px);
+  }
+
+  .dinamicSwitch {
+    transform: translateX(calc(var(--darkmodeWidth) - var(--svgWH) - 13px));
+  }
 }
+
 .staticSwitch {
+  width: auto;
   border: none;
-  max-width: fit-content !important;
-  justify-content: center;
-}
-
-.normalSwitch {
-  justify-content: flex-start;
-}
-
-.dinamicSwitch {
-  justify-content: flex-end;
+  min-width: auto;
+  box-shadow: 0 0 8px var(--darkmodeColor);
 }
