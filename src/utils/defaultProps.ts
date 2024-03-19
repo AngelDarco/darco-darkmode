@@ -1,35 +1,32 @@
-import type { SwitchStyles, Icons } from "../types";
+import type { DarkmodeVariables, Icons } from "../types";
 import DefaultIcons from "../assets/Icons";
 
 const defaultProps = () => {
   return {
-    defaultStyles,
+    defaultVariables,
     icons,
   };
 };
 
-const defaultStyles: SwitchStyles = [
-  {
-    theme: "Dark",
-    variables: ["--main-background", "--main-color", "--main-hover-color"],
-    values: ["#000", "#fff", "#fbfbfb"],
+const defaultVariables: DarkmodeVariables = {
+  dark: {
+    "--main-background": "#000",
+    "--main-color": "#fff",
   },
-  {
-    theme: "Light",
-    variables: ["--main-background", "--main-color", "--main-hover-color"],
-    values: ["#fff", "#000", "#242526"],
+  light: {
+    "--main-background": "#fff",
+    "--main-color": "#000",
   },
-];
+};
 
 const { dark, light } = DefaultIcons();
-const icons: Icons = [
-  {
-    theme: "Dark",
+const icons: Icons = {
+  dark: {
     icon: dark,
   },
-  {
-    theme: "Light",
+  light: {
     icon: light,
   },
-];
+};
+
 export default defaultProps;
