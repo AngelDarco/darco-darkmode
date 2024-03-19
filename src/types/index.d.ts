@@ -1,53 +1,43 @@
 import { CSSProperties } from "react";
 
-export type CustomStyles = {
-  mainContainer?: CSSProperties;
-  switchContainer?: CSSProperties;
-  iconsContainer?: CSSProperties;
-};
-
-export type SwitchMode = "dynamic" | "static";
+export type mode = "dynamic" | "static";
 export type DarkModeProps = {
-  switchStyles: SwitchStyles;
+  variables: DarkmodeVariables;
   icons?: Icons | boolean;
-  SwitchMode?: SwitchMode;
-  styles?: CustomStyles;
+  mode?: mode;
+  styles?: CSSProperties;
   hover?: boolean;
   isDark?: (theme: string) => void;
 };
 
-export type ThemeType = "Light" | "Dark";
-export type SwitchStyles = [
-  {
-    theme: ThemeType;
-    variables: string[];
-    values: string[];
-  },
-  {
-    theme: ThemeType;
-    variables: string[];
-    values: string[];
-  }
-];
+export type Theme = "light" | "dark";
+export type DarkmodeVariables = {
+  dark: {
+    [key: string]: string;
+  };
+  light: {
+    [key: string]: string;
+  };
+};
 
-export type Icons = [
-  {
-    theme: ThemeType;
+export type Icons = {
+  dark: {
     icon: JSX.Element;
-  },
-  {
-    theme: ThemeType;
+    styles?: CSSProperties;
+  };
+  light: {
     icon: JSX.Element;
-  }
-];
+    styles?: CSSProperties;
+  };
+};
 
 export type HandlerSwitchTheme = {
-  theme: ThemeType | undefined;
-  setTheme: React.Dispatch<React.SetStateAction<ThemeType | undefined>>;
+  theme: Theme | undefined;
+  setTheme: React.Dispatch<React.SetStateAction<Theme | undefined>>;
   setSwitchTheme: React.Dispatch<React.SetStateAction<boolean>>;
   icons: Icons | boolean | undefined;
-  setIcon: React.Dispatch<React.SetStateAction<JSX.Element | undefined>>;
-  switchStyles: SwitchStyles | undefined;
+  setIcon: React.Dispatch<React.SetStateAction<Icons | undefined>>;
+  variables: DarkmodeVariables | undefined;
   darkMode: any;
 };
 
